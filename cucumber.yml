@@ -1,0 +1,5 @@
+---
+default: -p bdd -p html --publish-quiet
+html: -f html -o logs/report.html
+bdd: --format pretty
+hmg: CONFIG=hmg.yml
