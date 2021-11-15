@@ -16,7 +16,9 @@ Capybara.configure do |config|
   # Para não subir uma aplicação nativa do Ruby.
   config.run_server = false
   Capybara.default_driver = :site_prism
+  Capybara.javascript_driver = :webkit
   Capybara.page.driver.browser.manage.window.maximize
   config.default_max_wait_time = 10
+  Capybara.ignore_hidden_elements = false
   config.app_host = "http://automationpractice.com/"
 end

@@ -7,7 +7,7 @@ class App
     Login.new
   end
 
-  def cadastro_page
-    Cadastro.new
+  def register_page
+    Register.new
   end
 end
