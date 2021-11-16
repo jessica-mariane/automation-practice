@@ -3,6 +3,7 @@ require "site_prism"
 require "cucumber"
 require "capybara/cucumber"
 require "selenium-webdriver"
+require "faker"
 
 # YAML é um módulo do ruby para carregar arquivos .yml. File.join passar caminho da execução do projeto e o caminho relativo onde está o arquivo yml.
 # ENV é um recurso para ter acesso as variáveis de ambiente

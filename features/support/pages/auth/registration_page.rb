@@ -1,7 +1,7 @@
 class Register < SitePrism::Page
   set_url "index.php?controller=authentication&back=my-account#account-creation"
   element :mr_radio, "#id_gender1"
-  element :mrs_radio, "#id_gender1"
+  element :mrs_radio, "#id_gender2"
   element :customer_first_name_input, "#customer_firstname"
   element :customer_last_name_input, "#customer_lastname"
   element :email_input, "#email"
