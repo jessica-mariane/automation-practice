@@ -1,10 +1,5 @@
-# learn-automation
-Aprendendo automação (Ruby com Selenium Webdriver)
-
-* Em Construção.
-
 ## Descrição do Projeto
-Projeto de automação(em construção) do site http://automationpractice.com/ para aprendizado.
+Projeto de automação do site http://automationpractice.com/
 
 ## Links - Tecnologias e Ferramentas utilizadas 
     O sistema operacional utilizado é o Windows 10 e o Navegador Google Chrome.
@@ -21,10 +16,7 @@ Links utilizados no Gemfile
 - [rufo] - https://rubygems.org/gems/rufo
 
 
-## Descrição do Projeto
-Contribuições são bem-vindas! 
-
-## Installation
+## Instalação
 ```sh
  Clonar o repositório do projeto na máquina local
 ```
