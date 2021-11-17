@@ -23,22 +23,32 @@ Dado("completo os dados com:") do |record_data|
   value_email = evaluate_script("document.querySelector('#email').value")
   expect(value_email).to be == @email_faker
   @app.register_page.password_input.set @record_data[:password]
-  within "#days" do
-    find("option[value='#{@record_data[:birth_day]}']").click
+  if (@record_data[:birth_day].length > 0)
+    within "#days" do
+      find("option[value='#{@record_data[:birth_day]}']").click
+    end
   end
-  within "#months" do
-    find("option[value='#{@record_data[:birth_month]}']").click
+  if (@record_data[:birth_month].length > 0)
+    within "#months" do
+      find("option[value='#{@record_data[:birth_month]}']").click
+    end
   end
-  within "#years" do
-    find("option[value='#{@record_data[:birth_year]}']").click
+  if (@record_data[:birth_year].length > 0)
+    within "#years" do
+      find("option[value='#{@record_data[:birth_year]}']").click
+    end
   end
   @app.register_page.company_input.set @record_data[:company]
   @app.register_page.address1_input.set @record_data[:address1]
   @app.register_page.address2_input.set @record_data[:address2]
   @app.register_page.city_input.set @record_data[:city]
-  @app.register_page.state_select.find("option", text: @record_data[:state]).select_option
+  if (@record_data[:state].length > 0)
+    @app.register_page.state_select.find("option", text: @record_data[:state]).select_option
+  end
   @app.register_page.zip_code_input.set @record_data[:zip_code]
-  @app.register_page.county_select.find("option", text: @record_data[:country]).select_option
+  if (@record_data[:country].length > 0)
+    @app.register_page.county_select.find("option", text: @record_data[:country]).select_option
+  end
   @app.register_page.add_information_textarea.set @record_data[:additional_info]
   @app.register_page.home_phone_input.set @record_data[:home_phone]
   @app.register_page.cell_phone_input.set @record_data[:cell_phone]
@@ -64,5 +74,6 @@ Quando("submeto o email para verificação") do
 end
 
 Então("devo receber a mensagem de erro {string}") do |msg|
-  expect(@app.auth_initial_page).to have_text msg
+  expect(page).to have_text msg
+  sleep 1
 end
