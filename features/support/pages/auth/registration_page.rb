@@ -9,6 +9,8 @@ class Register < SitePrism::Page
   element :day_select, "#days"
   element :month_select, "#months"
   element :year_select, "#years"
+  element :newsletter_ok_checkbox, "#newsletter"
+  element :receive_emails_checkbox, "#optin"
   element :first_name_input, "#firstname"
   element :last_name_input, "#lastname"
   element :company_input, "#company"
