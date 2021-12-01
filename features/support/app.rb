@@ -10,4 +10,8 @@ class App
   def register_page
     Register.new
   end
+
+  def my_account
+    MyAccount.new
+  end
 end
